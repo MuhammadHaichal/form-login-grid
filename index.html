@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Form Login</title>
+  <style>
+    *,
+    html {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url("asset/background-web.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .container {
+      width: 80%;
+      margin: 40px auto;
+      padding: 15px;
+      display: grid;
+      grid-template-areas:
+        "title title"
+        "username username"
+        "password password"
+        "button button"
+        "footer footer";
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      backdrop-filter: blur(8px);
+    }
+
+    .title-form {
+      margin-top: 30px;
+      font-size: 4.8em;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 500;
+      text-align: center;
+      grid-area: title;
+      color: rgb(255, 196, 0);
+    }
+
+    .field-username {
+      padding: 20px;
+      width: 100%;
+      grid-area: username;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .field-password {
+      padding: 20px;
+      width: 100%;
+      grid-area: password;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .field-button {
+      padding: 20px;
+      width: 100%;
+      grid-area: button;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+
+    .input {
+      border: none;
+      border-radius: 3px;
+      padding: 1rem;
+      font-size: 1.2em;
+    }
+
+    label {
+      font-size: 1.5em;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: normal;
+      text-transform: capitalize;
+      color: #fff;
+    }
+
+    .btn {
+      padding: 1.2rem;
+      font-size: 1.5em;
+      background-color: lightblue;
+    }
+
+    .field-footer {
+      grid-area: footer;
+      margin: 20px auto;
+      align-self: center;
+    }
+
+    p {
+      color: #ddd;
+      font-size: 1.6em;
+      font-weight: normal;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .link-register {
+      text-decoration: none;
+      color: #ddd;
+      font-weight: normal;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .link-register:hover {
+      text-decoration: underline;
+      transition: 0.5s ease;
+    }
+
+    /* Responsive Breakpoints */
+    @media screen and (min-width: 768px) {
+      .container {
+        width: 50%;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .container {
+        width: 40%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <form action="" class="container">
+    <h1 class="title-form">Login</h1>
+
+    <section class="field-username">
+      <label for="user">Username</label>
+      <input type="text" id="user" class="input input-user" required/>
+    </section>
+
+    <section class="field-password">
+      <label for="pass">Password</label>
+      <input type="password" id="pass" class="input input-pass" required />
+    </section>
+
+    <section class="field-button">
+      <button type="submit" class="btn">Masuk</button>
+    </section>
+
+    <footer class="field-footer">
+      <p>
+        Belum punya akun, silakan
+        <a href="#" class="link-register">Daftar</a>
+      </p>
+    </footer>
+  </form>
+</body>
+
+</html>
